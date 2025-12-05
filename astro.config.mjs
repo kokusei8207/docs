@@ -1,10 +1,12 @@
 // @ts-check
 
+import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
+	site: "https://docs.yuramedia.com",
 	integrations: [
 		starlight({
 			title: "Docs",
@@ -61,5 +63,6 @@ export default defineConfig({
 			],
 			tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 2 },
 		}),
+		sitemap(),
 	],
 });
